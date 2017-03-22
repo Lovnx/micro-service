@@ -1,0 +1,15 @@
+server:
+  port: 7077
+spring:
+  application:
+    name: hystrix
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:7070/eureka/
+  instance:
+    hostname:ribbon
+ribbon:
+  eureka:
+    enabled: true
+    

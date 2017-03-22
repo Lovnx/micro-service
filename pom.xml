@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.lovnx</groupId>
+  <artifactId>micro-service</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <modules>
+    <module>ribbon</module>
+    <module>eureka-sever</module>
+    <module>config-server</module>
+    <module>zuul</module>
+    <module>service-A</module>
+    <module>service-B</module>
+    <module>service-B2</module>
+    <module>hystrix-ribbon</module>
+    <module>feign</module>
+    <module>hystrix-feign</module>
+    <module>hystrix-dashboard</module>
+    <module>turbine</module>
+  </modules>
+  
+  	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.3.5.RELEASE</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+</project>
