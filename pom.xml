@@ -18,7 +18,6 @@
     <module>hystrix-feign</module>
     <module>hystrix-dashboard</module>
     <module>turbine</module>
-    <module>task-timestamp</module>
   </modules>
   
   	<parent>
