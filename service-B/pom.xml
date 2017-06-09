@@ -37,6 +37,35 @@
             <artifactId>commons-lang3</artifactId>
             <version>3.5</version>
         </dependency>
+        
+        <dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+        </dependency>
+        
+        <dependency>
+	      <groupId>org.mybatis.spring.boot</groupId>
+	      <artifactId>mybatis-spring-boot-starter</artifactId>
+	      <version>1.2.0</version>
+	    </dependency>
+	    <dependency>
+	      <groupId>com.github.pagehelper</groupId>
+	      <artifactId>pagehelper-spring-boot-starter</artifactId>
+	      <version>1.1.0</version>
+	    </dependency>
+	    <!--Spring cloud framework end-->
+	    <!--MySQL start-->
+	    <dependency>
+	      <groupId>com.alibaba</groupId>
+	      <artifactId>druid</artifactId>
+	      <version>1.0.28</version>
+	    </dependency>
+	    <dependency>
+	      <groupId>mysql</groupId>
+	      <artifactId>mysql-connector-java</artifactId>
+	      <version>5.1.40</version>
+	    </dependency>
+    <!--MySQL end-->
 	</dependencies>
 
 	<dependencyManagement>
