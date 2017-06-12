@@ -19,6 +19,7 @@
     <module>hystrix-dashboard</module>
     <module>turbine</module>
     <module>service-admin</module>
+    <module>service-admin-client</module>
   </modules>
   
   	<parent>
