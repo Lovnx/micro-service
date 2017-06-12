@@ -17,8 +17,6 @@ public class HystrixService {
 
   /**
    * 使用@HystrixCommand注解指定当该方法发生异常时调用的方法
-   * @param id id
-   * @return 通过id查询到的用户
    */
   @HystrixCommand(fallbackMethod = "fallback")
   public String findById(@RequestParam Integer a,@RequestParam Integer b) {
@@ -27,8 +25,6 @@ public class HystrixService {
 
   /**
    * hystrix fallback方法
-   * @param id id
-   * @return 默认的用户
    */
   public String fallback(@RequestParam Integer a,@RequestParam Integer b) {
 	  HystrixService.LOGGER.info("异常发生，进入fallback方法，接收的参数：id = {}", "qqq");
