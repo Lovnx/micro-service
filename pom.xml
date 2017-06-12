@@ -18,6 +18,7 @@
     <module>hystrix-feign</module>
     <module>hystrix-dashboard</module>
     <module>turbine</module>
+    <module>service-admin</module>
   </modules>
   
   	<parent>
