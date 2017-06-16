@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestTemplate;
 
 @RestController
 public class ComputeController {
@@ -25,4 +26,10 @@ public class ComputeController {
         return "From Service-B, Result is " + r+"\nPort:"+instance.getPort();
     }
 
+    //B服务调用A服务
+    @RequestMapping(value="testServiceA",method=RequestMethod.GET)
+    public String testServiceB(@RequestParam Integer a,@RequestParam Integer b){
+    	RestTemplate restTemplate=new RestTemplate();
+    	return restTemplate.getForObject("http://localhost:7074/add?a="+a+"&b="+b, String.class);
+    }
 }

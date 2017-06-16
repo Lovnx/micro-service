@@ -19,7 +19,7 @@
     <module>hystrix-dashboard</module>
     <module>turbine</module>
     <module>service-admin</module>
-    <module>service-admin-client</module>
+    <module>sleuth</module>
   </modules>
   
   	<parent>
