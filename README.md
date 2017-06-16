@@ -42,6 +42,9 @@ spring-cloud 微服务组件demo
 <td>turbine</td>  <td>集群下hystrix可视化监控台</td>  <td>7081</td>
 </tr>
 <tr>
+<td>sleuth</td>  <td>服务链路追踪</td>  <td>7082</td>
+</tr>
+<tr>
 <td>service-admin</td>  <td>spring boot admin监控台</td>  <td>7088</td>
 </tr>
 </tbody></table>
