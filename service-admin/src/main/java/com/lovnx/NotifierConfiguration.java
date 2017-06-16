@@ -27,13 +27,15 @@ public class NotifierConfiguration {
     private Notifier notifier;
 
     //服务上线或者下线都通知
-    private String[] reminderStatuses = { "DOWN", "OFFLINE" };
+    private String[] reminderStatuses = { "DOWN" };
     
     @Bean
     @Primary
     public RemindingNotifier remindingNotifier() {
         RemindingNotifier remindingNotifier = new RemindingNotifier(notifier);
+        //设定时间，5分钟提醒一次
 //        remindingNotifier.setReminderPeriod(TimeUnit.MINUTES.toMillis(5)); 
+        //设定监控服务状态，状态改变为给定值的时候提醒
         remindingNotifier.setReminderStatuses(reminderStatuses);
         return remindingNotifier;
     }
