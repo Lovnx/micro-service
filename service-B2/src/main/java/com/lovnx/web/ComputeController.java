@@ -1,5 +1,7 @@
 package com.lovnx.web;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
@@ -18,8 +20,9 @@ public class ComputeController {
     @Autowired
     private DiscoveryClient client;
 
-    @RequestMapping(value = "/add" ,method = RequestMethod.GET)
-    public String add(@RequestParam Integer a, @RequestParam Integer b) {
+    @RequestMapping(value = "/**" ,method = RequestMethod.GET)
+    public String add(@RequestParam Integer a, @RequestParam Integer b,HttpServletRequest request) {
+    	System.out.println(request.getRequestURL());
         ServiceInstance instance = client.getLocalServiceInstance();
         Integer r = a + b;
         logger.info("/add, host:" + instance.getHost() + ", service_id:" + instance.getServiceId() + ", result:" + r);
